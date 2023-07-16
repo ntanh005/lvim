@@ -119,12 +119,8 @@ local config = {
         },
       },
       format = {
-        enabled = true,
-        settings = {
-          profile = "GoogleStyle",
-          url = home .. "/.config/lvim/.java-google-formatter.xml",
-        },
-      },
+        enabled = false,
+      }
     },
     signatureHelp = { enabled = true },
     completion = {
@@ -161,6 +157,11 @@ local config = {
     bundles = bundles,
   },
 }
+-- config formater
+-- local formatters = require "lvim.lsp.null-ls.formatters"
+-- formatters.setup {
+--   { command = "google_java_format", filetypes = { "java" } },
+-- }
 
 jdtls.start_or_attach(config)
 
